@@ -11,7 +11,7 @@ fn _basics() {
     println!("{:?}", collected_values);
 }
 
-fn read_file_and_print() {
+fn _read_file_and_print() {
     let file = std::fs::read_to_string("lines").unwrap();
 
     file.lines()
@@ -22,6 +22,62 @@ fn read_file_and_print() {
         .for_each(|(_, line)| println!("{}", line));
 }
 
-fn main() {
-    read_file_and_print();
+/*
+enum Color {
+    Red,
+    Green,
+    Blue,
+    Yellow,
 }
+
+impl Color {
+    fn is_green(&self) -> bool {
+        if let Color::Green = self {
+            return true;
+        }
+
+        return false;
+    }
+
+    fn is_green_parts(&self) -> bool {
+        match self {
+            Color::Red => return false,
+            Color::Green => return false,
+            Color::Blue => return true,
+            Color::Yellow => return true,
+        }
+    }
+}
+
+fn print_color(color: Color) {
+    match color {
+        Color::Red => println!("red"),
+        Color::Green => println!("green"),
+        Color::Blue => println!("blue"),
+        Color::Yellow => println!("yellow"),
+    }
+}
+*/
+
+/*
+struct Custom {
+    age: usize,
+    name: String,
+}
+
+enum Item {
+    Number(usize),
+    String(String),
+    MyCustom(Custom),
+}
+
+fn append(items: &mut Vec<Item>) {
+    items.push(Item::String("Hello, FEM".to_string()));
+}
+*/
+
+fn _multiply(val: Option<usize>) -> Option<usize> {
+    return Some(val? * 5);
+}
+
+fn main() {}

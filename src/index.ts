@@ -1,4 +1,4 @@
-import fs from "fs";
+// import fs from "fs";
 
 /*
 function _basics() {
@@ -8,6 +8,7 @@ function _basics() {
 }
 */
 
+/*
 async function readFileAndPrint() {
   fs.readFileSync("lines", "utf-8")
     .toString()
@@ -16,5 +17,34 @@ async function readFileAndPrint() {
     .filter((_, idx) => idx > 1 && idx < 4)
     .forEach((line) => console.log(line));
 }
+*/
 
-readFileAndPrint();
+enum Color {
+  Red,
+  Green,
+  Blue,
+  Yellow,
+}
+
+function printColor(color: Color) {
+  switch (color) {
+    case Color.Red:
+      console.log("red");
+      break;
+
+    case Color.Green:
+      console.log("green");
+      break;
+
+    case Color.Blue:
+      console.log("blue");
+      break;
+  }
+}
+
+function practice(n: number | undefined): number {
+  if (typeof n === "undefined") return 0;
+  return n * 5;
+}
+
+printColor(Color.Yellow); // won't print anything
